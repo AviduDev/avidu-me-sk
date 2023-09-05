@@ -1,4 +1,4 @@
-/** @type {import('./$types').PageLoad} */
+/** @type {import('../$types').PageLoad} */
 
 import { GraphQLClient } from 'graphql-request';
 
@@ -8,15 +8,11 @@ export const load = async ({ params }) => {
 		'https://ap-south-1.cdn.hygraph.com/content/clm4qu4va2ql701ugggfxggwo/master'
 	);
 
-	const { service } = await hygraph.request(
+	const { relatedService } = await hygraph.request(
 		`query MyQuery($slug: String!) {
-            service(where: {slug: $slug}) {
+            relatedService(where: {slug: $slug}) {
                 name
                 slug
-				relatedServices {
-					name
-					slug
-				  }
             }
         }`,
 		{
@@ -25,6 +21,6 @@ export const load = async ({ params }) => {
 	);
 
 	return {
-		service
+		relatedService
 	};
 };
