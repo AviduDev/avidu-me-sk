@@ -1,8 +1,7 @@
 <header>
 	<nav>
-		<a href="/">avidu</a>
+		<li><a href="/">/</a></li>
 		<ul>
-			<li><a href="/">/</a></li>
 			<li><a href="/website-creation">what,</a></li>
 			<li><a href="/projects">work,</a></li>
 			<li><a href="/contact">reach,</a></li>
