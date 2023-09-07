@@ -7,18 +7,20 @@ export const load = async () => {
 		'https://ap-south-1.cdn.hygraph.com/content/clm4qu4va2ql701ugggfxggwo/master'
 	);
 
-	const { services } = await hygraph.request(
-		`query MyQuery {
-            services {
-                name
-                slug
-              }
-    	}	
-    
-          `
+	const { relatedServices } = await hygraph.request(
+		`  
+		query MyQuery {
+			relatedServices {
+			  name
+			  slug
+			  description
+			}
+		  }
+		  
+		  `
 	);
 
 	return {
-		services
+		relatedServices
 	};
 };

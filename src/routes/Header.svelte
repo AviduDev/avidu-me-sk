@@ -1,17 +1,29 @@
 <header>
 	<nav>
+		<a href="/">avidu</a>
 		<ul>
-			<li><a href="/">home</a></li>
-			<li><a href="/services">services</a></li>
-			<li><a href="/projects">projects</a></li>
-			<li><a href="/contact">contact</a></li>
-			<li><a href="/about">about</a></li>
+			<li><a href="/">/</a></li>
+			<li><a href="/website-creation">what,</a></li>
+			<li><a href="/projects">work,</a></li>
+			<li><a href="/contact">reach,</a></li>
+			<li><a href="/about">me,</a></li>
 		</ul>
 	</nav>
 </header>
 
 <style>
+	nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	ul {
+		display: flex;
+		padding: 0;
+	}
 	li {
+		list-style: none;
 		margin: 1rem;
 	}
 </style>

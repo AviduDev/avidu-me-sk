@@ -1,4 +1,4 @@
-/** @type {import('../$types').PageLoad} */
+/** @type {import('./$types').PageLoad} */
 
 import { GraphQLClient } from 'graphql-request';
 
@@ -12,7 +12,13 @@ export const load = async ({ params }) => {
 		`query MyQuery($slug: String!) {
             relatedService(where: {slug: $slug}) {
                 name
-                slug
+				biggerDescription
+				description
+				image
+				slug
+				feature {
+				html
+				}
             }
         }`,
 		{

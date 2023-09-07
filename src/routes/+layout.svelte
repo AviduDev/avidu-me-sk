@@ -20,13 +20,13 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		padding: 1rem;
 	}
 
 	main {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
