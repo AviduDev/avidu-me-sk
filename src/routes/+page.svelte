@@ -2,6 +2,10 @@
 	import ProcessList from './ProcessList.svelte';
 	import SimpleList from './SimpleList.svelte';
 	import Title from './Title.svelte';
+	import ProjectCard from '../lib/components/ProjectCard.svelte';
+
+	export let data;
+	let { projects ,services } = data;
 </script>
 
 <div class="container">
@@ -130,4 +134,12 @@
 			visual journey through creativity, user-centric design, and seamless user experiences.
 		</p>
 	</div>
+	{#each projects as { name, year, type, liveUrl, image, publishedAt, slug }}
+		<ProjectCard {name} {year} {type} {liveUrl} {image} {publishedAt} {slug} />
+	{/each}
+
+	<!-- *************-------------testing-------------************* -->
+	{#each services as service}
+		<h1>{service.name}</h1>
+	{/each}
 </div>

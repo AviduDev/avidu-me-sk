@@ -1,3 +1,5 @@
+export const prerender = true;
+
 /** @type {import('./$types').PageLoad} */
 
 import { GraphQLClient } from 'graphql-request';
