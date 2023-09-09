@@ -17,6 +17,6 @@
 			<div class="legal" />
 		</div>
 		<hr />
-		<p>Avidu©2023</p>
+		<span>Avidu©2023</span>
 	</div>
 </footer>
