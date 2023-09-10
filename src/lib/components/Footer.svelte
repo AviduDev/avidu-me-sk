@@ -1,5 +1,4 @@
 <script>
-	import Quote from './Quote.svelte';
 	import Title from '../../routes/Title.svelte';
 </script>
 
