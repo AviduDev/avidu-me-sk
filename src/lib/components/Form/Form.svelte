@@ -8,7 +8,7 @@
         <form method="POST" class="container">
             <div class="input">
                 <label for="">To:</label>
-                <input name="to" type="email" value="hello@crocodaily.com" />
+                <input name="to" type="email" />
             </div>
             <div class="input">
                 <label for="">Subject:</label>
