@@ -10,7 +10,6 @@ export const actions = {
 			const subject = formData.get('website');
 			const body = formData.get('features');
 			const email = formData.get('email');
-			const attachments = formData.get('attachments');
 			console.log(body);
 			let html = `<h2>Hi!</h2><pre>${body}</pre>`;
 
@@ -20,7 +19,6 @@ export const actions = {
 				subject: subject,
 				text: body,
 				html: html,
-				attachments: attachments,
 				replyTo: email,
 			};
 
