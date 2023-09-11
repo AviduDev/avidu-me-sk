@@ -1,4 +1,3 @@
-import { GOOGLE_EMAIL } from '$env/static/private';
 import transporter from '$lib/components/nodeMailer.server';
 
 export const prerender = false;
@@ -7,18 +6,22 @@ export const actions = {
 	default: async ({ request }) => {
 		try {
 			const formData = await request.formData();
-			const email = 'avidu97@gmail.com';
-			const subject = formData.get('subject');
-			const body = formData.get('body');
+			const to = 'avidu97@gmail.com';
+			const subject = formData.get('website');
+			const body = formData.get('features');
+			const email = formData.get('email');
+			const attachments = formData.get('attachments');
 			console.log(body);
 			let html = `<h2>Hi!</h2><pre>${body}</pre>`;
 
 			const message = {
-				from: GOOGLE_EMAIL,
-				to: email,
+				from: email,
+				to: to,
 				subject: subject,
 				text: body,
-				html: html
+				html: html,
+				attachments: attachments,
+				replyTo: email,
 			};
 
 			const sendEmail = async (message) => {
