@@ -49,6 +49,10 @@ h1 {
 	font-size: 2rem;
 }
 
+button {
+	font-size: 1rem;
+}
+
 .md-p {
 	font-size: 1rem;
 	font-weight: normal;

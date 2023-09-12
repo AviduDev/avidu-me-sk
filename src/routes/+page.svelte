@@ -3,9 +3,10 @@
 	import SimpleList from './SimpleList.svelte';
 	import Title from './Title.svelte';
 	import ProjectCard from '../lib/components/ProjectCard.svelte';
+	import Accordian from '$lib/components/Accordian.svelte';
 
 	export let data;
-	let { projects ,services } = data;
+	let { projects, questionTypes } = data;
 </script>
 
 <div class="container">
@@ -138,8 +139,14 @@
 		<ProjectCard {name} {year} {type} {liveUrl} {image} {publishedAt} {slug} />
 	{/each}
 
-	<!-- *************-------------testing-------------************* -->
-	{#each services as service}
-		<h1>{service.name}</h1>
+	<!-- accordion -->
+	<section>
+		<Title BigTitle = 'What they ask?' SmallTitle = 'FAQs' />
+	{#each questionTypes as { questions, typeName }}
+		{#each questions as { answer, question }}
+			<Accordian {answer} {question} {typeName} />
+		{/each}
 	{/each}
+</section>
+	<!-- *************-------------testing-------------************* -->
 </div>
