@@ -12,6 +12,8 @@
 <div class="container">
 	<!-- hero -->
 	<div class="hero">
+		<h2>Hi im avidu</h2>
+
 		<h1>Better websites for your next big idea</h1>
 		<img
 			src="https://res.cloudinary.com/avidu/image/upload/v1694105756/Avidu-me/Hero_GIF_ug3xmy.gif"
